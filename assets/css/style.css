@@ -26,5 +26,25 @@ body {
   top: 0;
   width: 100%;
 }
+.container::before {
+  background: linear-gradient(to top, #0a2a43, transparent);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  z-index: 999;
+}
+.container::after {
+  background: #0a2a43;
+  content: "";
+  position: absolute;
+  mix-blend-mode: color;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
 
 /*# sourceMappingURL=style.css.map */

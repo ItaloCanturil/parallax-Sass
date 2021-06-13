@@ -22,8 +22,30 @@ body {
     left: 0;
     position: absolute;
     object-fit: cover; // especifica como o elemento deve se comportar em relação ao elemento que define width e height
-    pointer-events: none;
+    pointer-events: none; // controla o alvo do evento do mouse, como está none nunca vai ser alvejada
     top: 0;
     width: 100%;
+  }
+
+  &::before {
+    background: linear-gradient(to top, #0a2a43, transparent);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &::after {
+    background: #0a2a43;
+    content: '';
+    position: absolute;
+		mix-blend-mode: color; // descreve como o elemento deve se comportar com os elementos abaixo
+    top: 0;
+		left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
   }
 }
